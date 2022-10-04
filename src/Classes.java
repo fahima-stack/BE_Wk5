@@ -5,7 +5,8 @@ public class Classes {
 	
 		/*Classes that come with Jave:
 		 * -E.g. String; StringBuilder, Scanner, Array, ArrayList
-		 * -Have used and created instances of these classes
+		 * -Have used and created instances of these classes (created an object which is an instance of the class). 
+		 * 
 		 */
 
 	}
