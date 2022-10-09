@@ -6,14 +6,19 @@ public class Manager extends Employee { //click Manager + add unimplemented meth
 //	private double pay; 
 //	private String address;
 //	private String reportsTo;
-//	private double bonusPercentage; 
-//	
+
 //	public double calculatePay() { //not required now that have Employee superclass 
+	
+	private double bonusPercentage; //extra field added to manager
+	
+	public Manager(String firstName, String lastName, double pay, double bonusPercentage) { //has additional parameter of bonusPercentage
+		super(firstName, lastName, pay);
+		this.bonusPercentage = bonusPercentage; 
+	}
 	
 	@Override
 	public double calculatePay() {
-		// TODO Auto-generated method stub
-		return 0;
+		return getPay() * 80 * bonusPercentage;
 	}
 	
 

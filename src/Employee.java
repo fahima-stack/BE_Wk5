@@ -9,6 +9,12 @@ public abstract class Employee { //Is the superclass; method means class can't b
 	private String address;
 	private String reportsTo;
 	
+	public Employee(String firstName, String lastName, double pay) { //super in inherited classes refers to this class: the instance of the class you're inheriting from
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.pay = pay; 
+	}
+	
 	public abstract double calculatePay(); //means it doesn't have an implementation so it doesn't have a body only time use ; right after method signature. This method HAS to be implemented by classes that inherit from Employee. 
 	//calculatePay method = example of polymorphism because each class that inherits can implement in their own way. 	
 	
