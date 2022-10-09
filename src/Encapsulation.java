@@ -3,12 +3,17 @@ public class Encapsulation {
 
 	public static void main(String[] args) {
 		
+		//Instances of Student and Rectangle class (objects) 
+		
 		Student student = new Student();
 		student.setFirstName("Sally");  //Value of 1 char prints null because of the validation, has to be >1 so it never got set. 
 		student.setPhoneNumber("1234567890");
 //		System.out.println(student.getFirstName());
 		student.introduce(); //introduce is void so doesn't return the string to be printed, can just call the method, hence this doesn't work: System.out.println(student.introduce());
 
+		Rectangle rec = new Rectangle(10.0, 15.0); //prints 150 area
+		rec.setLength(10.0); //prints 100 area
+		System.out.println(rec.getArea());
 		
 		/*Need to encapsulate the object's data and only expose what needs to be used. Done using access modifiers.
 		 * Access modifiers: 
