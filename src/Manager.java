@@ -1,17 +1,25 @@
 
-public class Manager {
+public class Manager extends Employee { //click Manager + add unimplemented methods
+
+//	private String firstName; 
+//	private String lastName; 
+//	private double pay; 
+//	private String address;
+//	private String reportsTo;
+//	private double bonusPercentage; 
+//	
+//	public double calculatePay() { //not required now that have Employee superclass 
 	
-	private String firstName; 
-	private String lastName; 
-	private double pay; 
-	private String address;
-	private String reportsTo;
-	private double bonusPercentage; 
+	@Override
+	public double calculatePay() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
-	public double calculatePay() { 
+
 	
 	}
 	
-}
+
 
 
