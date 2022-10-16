@@ -21,7 +21,7 @@ public class FileLogger implements Logger{
 	public void info(String info) {
 		Date date = new Date();
 		try {
-			writer.write("INFO: " + date.toString() + " - " + info);
+			writer.append("INFO: " + date.toString() + " - " + info);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -30,19 +30,34 @@ public class FileLogger implements Logger{
 
 	@Override
 	public void warning(String warning) {
-		// TODO Auto-generated method stub
+		Date date = new Date();
+		try {
+			writer.append("WARNING: " + date.toString() + " - " + warning);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		
 	}
 
 	@Override
 	public void error(String error) {
-		// TODO Auto-generated method stub
-		
+		Date date = new Date();
+		try {
+			writer.append("ERROR: " + date.toString() + " - " + error);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+			
 	}
 
 	@Override
 	public void fatal(String fatal) {
-		// TODO Auto-generated method stub
+		Date date = new Date();
+		try {
+			writer.append("INFO: " + date.toString() + " - " + fatal);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		
 	}
 
