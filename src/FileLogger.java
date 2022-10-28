@@ -22,6 +22,7 @@ public class FileLogger implements Logger{
 		Date date = new Date();
 		try {
 			writer.append("INFO: " + date.toString() + " - " + info);
+			writer.newLine(); //writes to new line instead of on same line
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -33,6 +34,7 @@ public class FileLogger implements Logger{
 		Date date = new Date();
 		try {
 			writer.append("WARNING: " + date.toString() + " - " + warning);
+			writer.newLine();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -44,6 +46,7 @@ public class FileLogger implements Logger{
 		Date date = new Date();
 		try {
 			writer.append("ERROR: " + date.toString() + " - " + error);
+			writer.newLine();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -55,10 +58,20 @@ public class FileLogger implements Logger{
 		Date date = new Date();
 		try {
 			writer.append("INFO: " + date.toString() + " - " + fatal);
+			writer.newLine(); 
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		
 	}
-
+	@Override
+	public void close() {
+		try {
+			writer.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+		
+	
 }

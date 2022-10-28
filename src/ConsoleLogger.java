@@ -1,3 +1,4 @@
+import java.security.PublicKey;
 import java.util.Date;
 
 public class ConsoleLogger implements Logger {
@@ -26,9 +27,14 @@ public class ConsoleLogger implements Logger {
 	public void fatal(String fatal) {
 		Date date = new Date();
 		System.err.println(date.toString() + " FATAL!!! " + fatal.toUpperCase());
-		
+	
+	}
+	
+	@Override
+	public void close() { //doesn't need close so leave it blank but for writer to be open (on FileLogger) have to close it. 
+	
 	}
 		
-	}
+}
 
 
