@@ -10,7 +10,7 @@ public class AsteriskLogger implements Logger {
 
 	@Override
 	public void Error(String str) {
-		String star = "***" + str + "***";
+		String star = "***" + "Error:" + str + "***";
 		String stars = "*".repeat(star.length());
 		
 		System.out.println(stars);
